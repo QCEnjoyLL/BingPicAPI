@@ -1,4 +1,5 @@
-name: "构建BingPicAPI正式版"
+name: 构建BingPicAPI
+
 on:
   workflow_dispatch:
 
