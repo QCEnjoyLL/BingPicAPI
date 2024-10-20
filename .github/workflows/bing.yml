@@ -1,4 +1,4 @@
-name: 构建BingPicAPI  
+name: 构建bingpicapi  
 
 on:  
   workflow_dispatch:  
@@ -6,9 +6,9 @@ on:
 jobs:  
   build:  
     runs-on: ubuntu-latest  
-    name: 构建BingPicAPI正式版  
+    name: 构建bingpicapi正式版  
     env:  
-      IMAGE_NAME: BingPicAPI  
+      IMAGE_NAME: bingpicapi  
     steps:  
       -  
         name: Checkout  
@@ -39,7 +39,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}  
           password: ${{ secrets.DOCKER_PASSWORD }}  
       -  
-        name: 构建BingPicAPI镜像并推送  
+        name: 构建bingpicapi镜像并推送  
         id: docker_build 
         uses: docker/build-push-action@v3  
         with:  
@@ -48,4 +48,4 @@ jobs:
           push: true  
           file: Dockerfile  
           platforms: linux/386,linux/amd64,linux/arm64,linux/ppc64le,linux/arm/v7,linux/arm/v6  
-          tags: ${{ secrets.DOCKER_USERNAME }}/BingPicAPI:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/bingpicapi:latest
