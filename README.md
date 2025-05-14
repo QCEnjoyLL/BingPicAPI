@@ -14,6 +14,15 @@
 | daysago | 0         | 获取N天前的图片，0为当天                 |
 
 
+## Docker 部署
+
+```
+docker run -d \
+  --name BingPicAPI \
+  --restart always \
+  -p 18081:8080 \
+  orangeqiu/bingpicapi:latest
+```
 
 ## 分辨率枚举
 
