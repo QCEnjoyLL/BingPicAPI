@@ -13,10 +13,9 @@
 | size    | 1920x1080 | 获取指定大小的图片，分辨率有限制。见下文 |
 | daysago | 0         | 获取N天前的图片，0为当天                 |
 
-
 ## Docker 部署
 
-```
+```php
 docker run -d \
   --name BingPicAPI \
   --restart always \
